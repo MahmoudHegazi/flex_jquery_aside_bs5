@@ -1,120 +1,153 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  
-  <style>
-   html, body{
-     height:100%;
-   }
-   .main_header{
-     height: 8%;
-   }
-   .main_content{
-     height: 92%;
-   }
-   
-   .menu-link{
-     cursor: pointer;   }
-   .menu-link:hover{
-     opacity: 0.9;
-     box-shadow: 0px 4px 8px 0px rgba(10, 50, 130, 0.6), 0px 6px 20px 0 rgba(60, 190, 60, 0.19) !important;
-   }
-   
-   .h-8{
-     height: 8% !important;
-   }
-   .h-92{
-     height: 92% !important;
-   }
-  </style>
-</head>
-<body>
-<div class="d-flex flex-column h-100">
-  <!-- top menu -->
-  <div class="p-1 bg-primary text-white rounded text-center d-flex justify-content-start align-items-center main_header">
-    <div>
-    <button class="btn btn-light text-dark" id="navmenu_toggle"><i id="navicon" class="btn-close"></i></button>
-    <span class="h5">My Home</span>
+<html lang="en">
+  <head>
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+      html, body{
+      height: 100%;
+      }
+      @media only screen and (max-width: 575px) {
+      .navmenu_class{
+      display: none;
+      width: 100% !important;
+      }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="d-flex flex-column h-100">
+      <!-- top menu -->
+      <div class="p-1 bg-primary text-white rounded text-center d-flex justify-content-start align-items-center main_header">
+        <div>
+          <button class="btn btn-light text-dark" id="navmenu_toggle"><i id="navicon" class="btn-close"></i></button>
+          <span class="h5">My Home</span>
+        </div>
+      </div>
+      <!-- top menu end -->
+      <div class="p-0 m-0 main_content h-100 bg-warning d-flex align-items-stretch">
+        <!-- aside -->
+        <!-- aside menu -->
+        <div class="border border-success bg-secondary w-25 navmenu_class" id="navmenu">
+          <div class="container-fluid m-0 p-0 d-flex flex-column justify-content-center align-items-center p-2 h-25 bg-danger">
+            <h5>Menu</h5>
+            <form class="d-flex">
+              <input class="form-control me-2" type="text" placeholder="Search">
+              <button class="btn btn-primary" type="button">Search</button>
+            </form>
+          </div>
+          <!-- nav links start -->
+          <div class="d-flex flex-column bg-dark">
+            <div class="gap-3 border border-secondary d-flex flex-column justify-content-start align-items-center w-100 p-2 h-75  flex-grow-1">
+              <div class="p-2 border border-secondary rounded w-100 d-flex justify-content-center align-items-center menu-link shadow-sm bg-light">1</div>
+              <div class="p-2 border border-secondary rounded w-100 d-flex justify-content-center align-items-center menu-link shadow-sm bg-light">2</div>
+              <div class="p-2 border border-secondary rounded w-100 d-flex justify-content-center align-items-center menu-link shadow-sm bg-light">3</div>
+              <div class="p-2 border border-secondary rounded w-100 d-flex justify-content-center align-items-center menu-link shadow-sm bg-light">4</div>
+              <div class="p-2 border border-secondary rounded w-100 d-flex justify-content-center align-items-center menu-link shadow-sm bg-light">5</div>
+              <div class="p-2 border border-secondary rounded w-100 d-flex justify-content-center align-items-center menu-link shadow-sm bg-light">6</div>
+              <div class="p-2 border border-secondary rounded w-100 d-flex justify-content-center align-items-center menu-link shadow-sm bg-light">6</div>
+            </div>
+            <!-- footer navlinks -->
+            <div class="border  d-flex flex-column justify-content-start align-items-center w-100 gap-3 p-2 mt-5 h-25">
+              <div class="p-2 border border-secondary rounded w-100 d-flex justify-content-center align-items-center menu-link shadow-sm bg-light">4</div>
+              <div class="p-2 border border-secondary rounded w-100 d-flex justify-content-center align-items-center menu-link shadow-sm bg-light">5</div>
+            </div>
+            <!-- end navlinks footer -->
+          </div>
+          <!-- navlinks end -->
+        </div>
+        <!-- aside end -->
+        <div class="flex-fill border border-secondary content_body" id="content_body_id">21</div>
+      </div>
     </div>
-  </div>
-  <!-- top menu end -->
-
-  <div class="p-0 m-0 container-fluid main_content">
-    <div class="d-flex h-100">
-     <!-- aside menu -->
-     <div class="border border-success w-25 h-100" id="navmenu">
-       <div class="container-fluid m-0 p-0 d-flex flex-column justify-content-center align-items-center p-2 h-8">
-         <h5>Menu</h5>
-       </div>
-       <!-- nav links start -->
-       <div class="d-flex flex-column h-92">
-         <div class="border border-secondary d-flex flex-column justify-content-start align-items-center w-100 gap-3 p-2 h-75 mb-5 flex-grow-1">
-             <div class="p-2 border border-secondary rounded w-100 d-flex justify-content-center align-items-center menu-link shadow-sm bg-light">1</div>
-             <div class="p-2 border border-secondary rounded w-100 d-flex justify-content-center align-items-center menu-link shadow-sm bg-light">2</div>
-             <div class="p-2 border border-secondary rounded w-100 d-flex justify-content-center align-items-center menu-link shadow-sm bg-light">3</div>
-             <div class="p-2 border border-secondary rounded w-100 d-flex justify-content-center align-items-center menu-link shadow-sm bg-light">4</div>
-             <div class="p-2 border border-secondary rounded w-100 d-flex justify-content-center align-items-center menu-link shadow-sm bg-light">5</div>
-             <div class="p-2 border border-secondary rounded w-100 d-flex justify-content-center align-items-center menu-link shadow-sm bg-light">6</div>
-             <div class="p-2 border border-secondary rounded w-100 d-flex justify-content-center align-items-center menu-link shadow-sm bg-light">6</div>             
-         </div>
-         <!-- footer navlinks -->
-         <div class="border border-primary d-flex flex-column justify-content-start align-items-center w-100 gap-3 p-2 mt-5 h-25">
-             <div class="p-2 border border-secondary rounded w-100 d-flex justify-content-center align-items-center menu-link shadow-sm bg-light">4</div>
-             <div class="p-2 border border-secondary rounded w-100 d-flex justify-content-center align-items-center menu-link shadow-sm bg-light">5</div>
-         </div>
-         <!-- end navlinks footer -->
-       </div>
-       <!-- navlinks end -->
-     </div>
-     <!-- main content -->
-     <div class="flex-fill border border-secondary">2</div>
-    </div>
-  </div>
-</div>
-
-<script>
-  // this to help jquery wait until toggle end else will make messy
-  let navAction = true;
-  // function to switch between classes
-  const removeAndAdd = (elmid, removeList, addList)=>{
-    const targetElm = $(`#${elmid}`);
-    removeList.forEach( (rcl)=>{      
-      if (targetElm.hasClass(rcl)){
-        targetElm.removeClass(rcl);
-      }
-    });
-    addList.forEach( (acl)=>{      
-      if (!targetElm.hasClass(acl)){
-          targetElm.addClass(acl);
-      }
-    });
-
-  };
-  const navToggleEnds = ()=> {
-    // update the navmenu icon dynamic async with jquery
-    if($('#navmenu:visible').length == 0){
-      removeAndAdd('navicon', ['fa-spinner', 'fa-spin'], ["fa-bars", "fa"]);
-    } else {
-      removeAndAdd('navicon', ['fa-spinner', 'fa-spin', 'fa'], ["btn-close"]);
-    }
-    navAction = true;
-  };
-  
-  $(function() {
-    $("#navmenu_toggle").on("click", ()=>{
-      if (navAction == true){
-        removeAndAdd('navicon', ['btn-close', 'fa-bars', 'fa'], ['fa', 'fa-spinner', 'fa-spin']);
-        $("#navmenu").toggle('mid', 'swing', navToggleEnds);
-        navAction = false;
-      }
-    });
-  });
-   //$("#navmenu_toggle").toggle(speed,easing,callback)
-</script>
-</body>
+    <script>
+      // this to help jquery wait until toggle end else will make messy
+      let navAction = true;
+      // function to switch between classes
+      const removeAndAdd = (elmid, removeList, addList)=>{
+        const targetElm = $(`#${elmid}`);
+        removeList.forEach( (rcl)=>{      
+          if (targetElm.hasClass(rcl)){
+            targetElm.removeClass(rcl);
+          }
+        });
+        addList.forEach( (acl)=>{      
+          if (!targetElm.hasClass(acl)){
+              targetElm.addClass(acl);
+          }
+        });
+      
+      };
+      const navToggleEnds = ()=> {
+        // update the navmenu icon dynamic async with jquery
+        if($('#navmenu:visible').length == 0){
+          removeAndAdd('navicon', ['fa-spinner', 'fa-spin'], ["fa-bars", "fa"]);
+          
+      
+          $("#content_body_id").css("display", "");
+      
+        } else {
+          removeAndAdd('navicon', ['fa-spinner', 'fa-spin', 'fa'], ["btn-close"]);
+        }
+        navAction = true;
+      };
+      
+      const mainContentFixer = ()=>{
+            if ($(window).width() > 575){
+              if($('#content_body_id:visible').length == 0){
+                $("#content_body_id").css("display", "");
+              }
+            } else {
+              if($('#navmenu:visible').length == 0){
+                $("#content_body_id").css("display", "");
+              } else {
+                $("#content_body_id").css("display", "none");
+              }
+            }         
+      
+      };
+      
+      /* function to display correct icon bassed on navmenu status this asynced with css media query*/
+      const iconFixer = ()=>{
+           if($('#navmenu:visible').length == 0){
+            removeAndAdd('navicon', ['btn-close'], ["fa-bars", "fa"]);               
+          } else {
+            removeAndAdd('navicon', ['fa-bars', 'fa'], ["btn-close"]);
+          }
+          // display or hide content body depend on screen width
+          mainContentFixer();
+      };
+      
+      $(function() {
+        $("#navmenu_toggle").on("click", ()=>{
+          if (navAction == true){
+          
+            // hide main content if mobile size
+            if ($(window).width() < 575){
+              if($('#navmenu:visible').length == 0){
+                $("#content_body_id").css("display", "none");
+              }
+            }
+            
+            removeAndAdd('navicon', ['btn-close', 'fa-bars', 'fa'], ['fa', 'fa-spinner', 'fa-spin']);
+            $("#navmenu").toggle('mid', 'swing', navToggleEnds);               
+            navAction = false;
+          }
+        });
+        
+        // based on device size or factly display of navmenu show the icon
+        iconFixer();
+        
+        // media query work on it's own with width and this will display the correct icon so not let js work with width
+        $( window ).resize(function() {iconFixer();});
+        
+      });
+       //$("#navmenu_toggle").toggle(speed,easing,callback)
+    </script>
+  </body>
 </html>
